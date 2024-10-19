@@ -1,0 +1,252 @@
+
+<header>
+    <div class="nav container">
+        <!-- upperpath:product & icon -->
+        <a href="#" class="logo">PRODUCTS</a>
+        
+        <i class='bx bx-shopping-bag' id="cart-icon">
+        <span class="cart-count">{{ cartCount }}</span></i>
+        
+       
+        <div class="cart">
+            <!-- right side bar your cart -->
+            <h2 class="cart-tittle"> your cart</h2>
+     <div class="cart-content">
+
+                <!-- <div class="cart-box"> -->
+                    <!-- <img src="../../assets/woman-4100999_640.jpg" alt="" class="cart-img"> -->
+                        <!-- your cart details -->
+                    <!-- <div class="detail-box">
+                            <div class="cart-product-tittle">
+                                Lorem ipsum dolor sit .
+                            </div>
+                            <div class="cart-price">$xx</div>
+                            <input type="number" value="1" class="cart-quantity">
+                        </div> -->
+                        <!-- remove cart -->
+                    <!-- <i class='bx bxs-trash-alt cart-remove'></i>  -->
+                 <!-- </div> -->
+
+             </div>
+             
+            <!-- total-price -->
+            <div class="total">
+                <div class="total-tittle">Total</div>
+                <div class="total-price">$0.00</div>
+            </div>
+            <!-- buy now -->
+            <button type="button" class="btn-buy">Buy Now</button>
+            <i class='bx bx-x' id="close-cart" ></i>
+        </div>
+            
+    </div>
+</header>
+
+    <!-- shop container -->
+<section class="shop container">
+    <h2 class="section-tittle">woman products</h2>
+    <div class="shop-content">
+        <!-- product box1 -->
+        
+            <div class="product-box">
+                <a routerLink="/">
+                <img src="../assets/wedges/Wedges1.jpeg" alt="" class="product-img">
+                 </a>
+                <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+                <span class="price">$30</span>
+                <i class='bx bx-heart' [class.added]="isLiked" (click)="toggleLike()"></i>
+                <i class='bx bx-shopping-bag add-cart'(click)="handleCartClick()"></i>
+        
+            </div>
+       
+        
+         <!-- product box2 -->
+        <div class="product-box">
+            <img src="../assets/wedges/Wedges2.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem .</h2>
+            <span class="price">$20</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'(click)="handleCartClick()"></i>
+        </div>
+         <!-- product box3 -->
+        <div class="product-box">
+            <img src="../assets/wedges/Wedges3.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorllll.</h2>
+            <span class="price">$30</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'(click)="handleCartClick()"></i>
+        </div>
+         <!-- product box4 -->
+        <div class="product-box">
+            <img src="../assets/wedges/Wedges4.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle"> dolor sit.</h2>
+            <span class="price">$50</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+         <!-- product box5 -->
+        <div class="product-box">
+            <img src="../assets/wedges/Wedges5.webp" alt="" class="product-img">
+            <h2 class="product-tittle"> sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+         <!-- product box6 -->
+        <div class="product-box">
+            <img src="../assets/wedges/Wedges6.webp" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+         <!-- product box7 -->
+        <div class="product-box">
+            <img src="../assets/wedges/Wedges7.webp" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+         <!-- product box8 -->
+        <div class="product-box">
+            <img src="../assets/wedges/wedges8.webp" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+         <!-- product box9-->
+        <div class="product-box">
+            <img src="../assets/wedges/wedges9.webp" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+         <!-- product box10 -->
+        <div class="product-box">
+            <img src="../assets/wedges/wedges10.webp" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+          <!-- product box11 -->
+        <div class="product-box">
+            <img src="../assets/wedges/wedges11.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+          <!-- product box12 -->
+        <div class="product-box">
+            <img src="../assets/wedges/Wedges12.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+          <!-- product box13 -->
+        <div class="product-box">
+            <img src="../assets/wedges/wedges13.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+          <!-- product box14 -->
+        <div class="product-box">
+            <img src="../assets/wedges/wedges14.jpg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+          <!-- product box15 -->
+        <div class="product-box">
+            <img src="../assets/wedges/wedges15.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+          <!-- product box16 -->
+        <div class="product-box">
+            <img src="../assets/wedges/wedges16.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+          <!-- product box17 -->
+          <div class="product-box">
+            <img src="../assets/wedges/wedges17.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+          <!-- product box18 -->
+          <div class="product-box">
+            <img src="../assets/wedges/wedges18.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+           <!-- product box19 -->
+           <div class="product-box">
+            <img src="../assets/wedges/wedges19.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+           <!-- product box20 -->
+           <div class="product-box">
+            <img src="../assets/wedges/wedges20.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+           <!-- product box21 -->
+           <div class="product-box">
+            <img src="../assets/wedges/wedges21.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+           <!-- product box22 -->
+           <div class="product-box">
+            <img src="../assets/wedges/wedges22.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+          <!-- product box23 -->
+          <div class="product-box">
+            <img src="../assets/wedges/wedges23.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+        
+          <!-- product box24-->
+          <div class="product-box">
+            <img src="../assets/wedges/wedges24.jpeg" alt="" class="product-img">
+            <h2 class="product-tittle">Lorem ipsum dolor sit.</h2>
+            <span class="price">$xxxx</span>
+            <i class='bx bx-heart add-heart'></i>
+            <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+    </div>
+
+</section>
+

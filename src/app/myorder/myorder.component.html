@@ -1,0 +1,67 @@
+
+    <header>
+        <div class="search-container">
+            <input type="text" placeholder="Search For Products..." [(ngModel)]="searchQuery" id="search" />
+            <button (click)="onSearch()">Search</button>
+          </div>         
+    </header>
+    <div class="container">
+        <aside class="filters">
+            <div class="filter-section">
+                <h3>ORDER STATUS</h3>
+                <button>on the way</button>
+                <button (click)="showDeliveredOrders()">Delivered</button>
+                <button (click)="showReturnOrders()">Return</button>
+                <button (click)="showCancelledOrders()">Cancelled</button>
+            </div>
+           
+        </aside>
+        <main class="orders">
+            <div class="no-orders">
+                <img src="../../assets/myorderlogo2.png" alt="No Orders">
+                <p>You have no orders</p>
+                <button><a routerLink="/navbar">Start Shopping</a></button>
+            </div>
+        
+            <div class="order-list" *ngIf="showOrders && currentStatus === 'delivered'">
+                <div *ngFor="let order of deliveredOrders" class="order-item">
+                  <img [src]="order.image" alt="Product Image">
+                  <div class="order-details">
+                    <h4>{{ order.name }}</h4>
+                    <p>{{ order.price }}</p>
+                    <p>Delivered on {{ order.deliveryDate }}</p>
+                    <button>Rate & Review Product</button>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="order-list" *ngIf="showOrders && currentStatus === 'return'">
+                <div *ngFor="let order of returnOrders" class="order-item">
+                  <img [src]="order.image" alt="Product Image">
+                  <div class="order-details">
+                    <h4>{{ order.name }}</h4>
+                    <p>{{ order.price }}</p>
+                    <p>Return on {{ order.returnDate }}</p>
+                    <p>Refund by {{ order.refundDate }}</p>
+                    <p>Seller: {{ order.seller }}</p>
+                    <p>Color: {{ order.color }}</p>
+                    <button>Rate & Review Product</button>
+                  </div>
+                </div>
+            </div>
+    
+            <div class="order-list" *ngIf="showOrders && currentStatus === 'cancelled'">
+                <div *ngFor="let order of cancelledOrders" class="order-item">
+                  <img [src]="order.image" alt="Product Image">
+                  <div class="order-details">
+                    <h4>{{ order.name }}</h4>
+                    <p>{{ order.price }}</p>
+                    <p>Cancelled on {{ order.cancelDate }}</p>
+                    <p>Seller: {{ order.seller }}</p>
+                    <button>Rate & Review Products</button>
+                  </div>
+                </div>
+            </div>
+        </main>
+    
+    </div>

@@ -1,0 +1,546 @@
+/* Container Styling */
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  bottom: 40px;
+}
+
+/* Contact Info Styling */
+.contactinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 350px;
+  border-radius: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, #e20404, #cf0808);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px 55px;
+  z-index: -1111;
+}
+
+.contactinfo::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.contactinfo::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+
+.contactinfo .logo {
+  width: 80px; 
+  height: 80px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; 
+  font-size: 14px; 
+}
+
+.contactinfo .logo img {
+  max-width: 155%;
+  max-height: 155%;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-left: 65px;
+}
+
+.contactinfo .vertical-line {
+  border-left: 2px solid #ddd; 
+  height: 100%;
+  margin: 0 20px; 
+  margin-left: 50px;
+}
+
+.contactinfo .info-content {
+  flex: 1;
+  color: #fff;
+}
+
+/* Contact Form Styling */
+.contactForm {
+  width: 100%;
+  max-width: 600px;
+  min-height: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  background-color: #fff;
+  margin-left: 20px; 
+  cursor: pointer;
+}
+
+.contactForm h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form Box Styling */
+.formBox {
+  display: flex;
+  flex-wrap: wrap;
+  outline: none;
+}
+
+/* Input Box Styling */
+.inputBox {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  color-scheme: black;
+}
+
+.inputBox input,
+.inputBox textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0 auto;
+}
+
+.inputBox span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #000;
+  transition: 0.2s;
+}
+
+/* Focus Styling */
+.inputBox input:focus + span,
+.inputBox textarea:focus + span {
+  top: 10px;
+  left: 5px;
+  font-size: 12px;
+  color: #333;
+}
+
+.inputBox input:focus ~ span,
+.inputBox textarea:focus ~ span,
+.inputBox input:valid ~ span,
+.inputBox textarea:valid ~ span {
+  transform: translateY(-25px);
+  font-size: 12px;
+  color: #000;
+}
+
+/* Button Styling */
+.btn {
+  background-color: #e90b0b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px 0px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+  overflow: hidden; 
+  z-index: 1111;
+}
+
+.btn:hover {
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(to right, #e60505, rgb(252, 250, 250), #d40a0a);
+  background-size: 200% 100%;
+  background-position: left bottom;
+}
+
+@keyframes example {
+  0% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: right bottom;
+  }
+}
+
+/* Flip Effect Container */
+.flip-container {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  position: relative;
+}
+
+/* Flip Card Styling */
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+/* Flip Card Flip Effect */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Bottom Border Styling */
+.bottomborder {
+  width: 100%;
+  max-width: 600px;
+  min-height: 400px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  margin-left: 20px; 
+  display: none;
+  position: relative;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.bottomborder.visible {
+  display: block;
+}
+
+.bottomborder h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bottomborder .info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bottomborder .info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bottomborder .info li span {
+  margin-right: 10px;
+}
+
+.bottomborder .info li i {
+  font-size: 24px;
+  color: #ec0808;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.bottomborder .sci {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.bottomborder .sci li {
+  display: inline;
+}
+
+.bottomborder .sci li a {
+  text-decoration: none;
+}
+
+.bottomborder .sci li i {
+  font-size: 24px;
+  color: #e90a0a;
+  transition: color 0.3s;
+  position: relative;
+  top: 70px;
+}
+
+.bottomborder .sci li a:hover i {
+  color: #ee0808;
+}
+
+.note {
+  margin-left: 30px;
+  font-size: 20px;
+  color: #000;
+}
+
+/* Success Message Styling */
+.success-message {
+  display: none;
+  margin-top: 20px;
+  color: green;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.success-message i {
+  margin-right: 10px;
+  font-size: 24px;
+  color: green;
+  margin-left: 10px;
+}
+
+/* .contactinfo image */
+.image-front {
+  width: 100px;
+  height: auto; 
+  display: block; 
+  margin: 50px auto; 
+  margin-top: 50px;
+  margin-left: 5px;
+  animation: colorChangeZoom 2s infinite alternate;
+}
+
+@keyframes colorChangeZoom {
+  0% {
+    filter: hue-rotate(0deg); 
+    transform: scale(1.1);
+  }
+  100% {
+    filter: hue-rotate(360deg); 
+    transform: scale(1);
+  }
+}
+/* Adjust for small screens */
+@media (max-width: 475px) {
+  /* Container */
+  .container {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0 10px; 
+  }
+  .contactinfo {
+      width: 100%;
+      max-width: 100%;
+      height: 250px;
+      padding: 15px; 
+      border-radius: 0 50px; 
+      margin-top: 50px; 
+      z-index: -11111;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  }
+  .contactinfo .logo img {
+      max-width: 140%; 
+      max-height: 80%;
+      margin-left: 30px; 
+  }
+  .contactinfo .vertical-line {
+      border-left: 2px solid #ddd; 
+      height: 100%;
+      margin: 0 20px; 
+      margin-left: 40px;
+  }
+  .bottomborder {
+      text-align: center;
+      height: 100px;
+      margin-top: 20px;
+      border: 2px solid #ddd;
+  }
+  .bottomborder .info li i {
+      margin-left: 0;
+  }
+  /* Success Message */
+  .success-message {
+      margin: 10px 0;
+  }
+  .contactForm {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 80px;
+      margin-right: 20px;
+      border: 2px solid #ddd;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  }
+  .flip-container {
+      flex-direction: column;
+      margin-top: 10px;
+  }
+  .flip-card-front, .flip-card-back {
+      padding: 10px;
+      margin-top: 10px;
+  }
+  .note {
+      font-size: 16px;
+      text-align: center;
+      margin-left: 0;
+      padding: 0;
+  }
+
+}
+
+/* Tablet adjustments */
+@media (min-width: 600px) and (max-width: 992px) {
+  .contactinfo, .contactForm {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .contactinfo {
+      width: 80%;
+      margin-top: 50px;
+  }
+
+  .contactForm {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 50px;
+  }
+
+  .flip-container {
+      flex-direction: column;
+      margin-top: 10px;
+  }
+  .note {
+      font-size: 18px;
+      text-align: center;
+      margin-left: 10px;
+      padding: 10px;
+  }
+  .flip-card-front, .flip-card-back {
+      padding: 15px;
+      margin-top: 10px;
+  }
+
+  .bottomborder {
+      margin: 10px;
+      margin-top: 10px;
+      margin-left: 30px;
+  }
+  .contactinfo .logo img {
+      max-width: 155%;
+      max-height: 155%;
+      object-fit: cover;
+      margin: 0 auto;
+      margin-left: 50px;
+  }
+  
+  .contactinfo .vertical-line {
+      border-left: 2px solid #ddd; 
+      height: 100%;
+      margin: 0 20px; 
+      margin-left: 30px;
+  }
+  .contactinfo{
+   
+    z-index: -11111;
+  }
+  
+}
+
+@media (min-width: 992px) {
+  .contactinfo, .contactForm {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .contactinfo {
+      width: 350px;
+      margin-top: 10px;
+      z-index: -111;
+  }
+
+  .contactForm {
+      max-width: 600px;
+      margin-top: 35px;
+  }
+  .note {
+      font-size: 20px;
+      text-align: left;
+      margin-left: 30px;
+      padding: 10px;
+  }
+}
+
+
+@media (min-width: 375px) and (max-width: 426px) {
+  .contactinfo .logo img {
+      max-width: 150%; 
+      margin-left: 65px;
+  }
+  
+  .contactinfo .vertical-line {
+      height: 100%; 
+      margin-left: 70px; 
+  }
+  .contactForm {
+      max-width: 600px;
+      margin-top: 50px;
+  }
+  .contactinfo{
+
+    z-index: -11111;
+  }
+}
+@media(max-width: 320px){
+  .contactForm {
+      max-width: 550px;
+      margin-top: 50px;
+  }
+  .contactinfo{
+    margin-top: 50px;
+    z-index: -11111;
+  }
+  .note {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 30px;
+    padding: 10px;
+}
+}

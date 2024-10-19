@@ -1,0 +1,373 @@
+
+<!-- new logn page code -->
+<div class="page">
+    <div class="left">
+  
+  
+        <div class="initial-text" id="initialText">
+            <div class="textflex">
+            <p>W</p>
+            <p>E</p>
+            <p>L</p>
+            <p>C</p>
+            <p>O</p>
+            <p>M</p>
+            <p>E</p>
+            <P>&nbsp;</P>
+            <p>T</p>
+            <P>O</P>
+        </div>
+        <div class="textflex">
+            <p>P</p>
+            <p>M</p>
+            <p>A</p>
+            <p>R</p>
+            <p>T</p>
+            <P>&nbsp;</P>
+            <p>G</p>
+            <p>L</p>
+            <p>O</p>
+            <p>B</p>
+            <p>A</p>
+            <P>L</P>
+            <P>&nbsp;</P>
+            <P>N</P>
+            <P>E</P>
+            <P>T</P>
+            <P>W</P>
+            <P>O</P>
+            <P>R</P>
+            <P>K</P>
+            <P>S</P>
+        </div>
+       
+        </div>
+       
+            
+            
+       
+      
+  <div class="container0">
+    <img src="/assets/PMARTGLOBALLOGO.jpeg" alt="img"  class="bounce-image networks">
+  </div>
+        <div class="container2">
+            
+            <div class="image-container">
+                <img src="/assets/pmlogo.jpeg" class="bounce-image" id="image1">
+                <span class="hover-text"> <a href="/#"><img src="/assets/networks.jpg"  class="networks1"></a></span>
+            </div>
+  
+        </div>
+        <div class="container3">
+            <div class="image-container">
+                <img src="/assets/pmlogo.jpeg" class="bounce-image" id="image2">
+                <span class="hover-text"><a href="/#"> <img src="/assets/pmartauto.jpg"  class="networks1"></a></span>
+            </div>
+            <div class="image-container">
+                <img src="/assets/pmlogo.jpeg" class="bounce-image " id="image3">
+                <span class="hover-text"> <a href="/#"><img src="/assets/networks.jpg"  class="networks1"></a></span>
+            </div>
+        </div>
+        <div class="container4">
+            <div class="image-container">
+                <img src="/assets/PMART.jpg" class="bounce-image pmart" id="image5">
+                <span class="hover-text"><a href="/#">PMART</a></span>
+            </div>
+        </div>
+        <div class="container31">
+            <div class="image-container">
+                <img src="/assets/pf.jpg" class="bounce-image" id="image7">
+                <span class="hover-text"><a href="/#"><img src="/assets/pmart foods.jpg"  class="networks1"></a></span>
+            </div>
+            <div class="image-container">
+                <img src="/assets/ptlogo.jpg" class="bounce-image" id="image8">
+                <span class="hover-text"> <a href="/#"><img src="/assets/tech.jpg"  class="networks1"></a></span>
+            </div>
+        </div>
+        <div class="container21">
+            <div class="image-container">
+                <img src="/assets/pmlogo.jpeg" class="bounce-image" id="image9">
+                <span class="hover-text"><a href="/#"><img src="/assets/pmartglobal.png"  class="networks1"></a></span>
+            </div>
+        </div>
+  
+        <!-- Rectangle containers -->
+        <div class="logocontainer">
+            <div class="image-containerlogo">
+                <div id="rectangle1" class="rectangle-container"><img src="/assets/pmlogo.jpeg" alt="pranaamam"></div>
+                <span class="hover-textlogo"><a href="/#"><img src="/assets/pent.jpg"class="networks2"></a></span>
+            </div>
+            <div class="image-containerlogo">
+                <div id="rectangle2" class="rectangle-container"><img src="/assets/logo (2).jpg" alt="prasidhaa"></div>
+                <span class="hover-textlogo"><a href="/#"><img src="/assets/prasidhaa.jpg"class="networks2"></a></span>
+            </div>
+            <div class="image-containerlogo">
+                <div id="rectangle3" class="rectangle-container"><img src="/assets/logo (2).jpg" alt="parinayam"></div>
+                <span class="hover-textlogo"><a href="/#"><img src="/assets/parinayam.jpg"class="networks2"></a></span>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="container1">
+            
+           
+            <!-- <p>Welcome to Prasidhaa Ventures. 😊</p> -->
+            <div class="form-buttons">
+              
+                <button type="button" (click)="displayContent('signin')" class="rectangle-containerbutton"> Login</button>
+                <button type="button" (click)="displayContent('signup')" class="rectangle-containerbutton"> SignUp</button>
+                <button type="button" (click)="displayContent('Forget')" class="rectangle-containerbutton">Forgot</button>
+  
+            </div>
+            <div class="output-section">
+                <ng-container *ngIf="currentForm === 'signin'" >
+                    <div class="containers bounce-in">
+                        <i class="bi bi-x-circle" (click)="closeForm()" id="close"></i>
+                        <div class="box">
+                            <span class="borderline"></span>
+                            <form (ngSubmit)="onSubmitSignIn()" #signInForm="ngForm" >
+                                <h2>Login</h2>
+      <div class="input-group">
+        <input type="email-id" id="email" [(ngModel)]="email" name="email" required>
+        <label for="email">
+            <i class="bi bi-person"></i>   Email Address
+        </label>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" [(ngModel)]="password" name="password" required>
+        <label for="password">
+            <i class="bi bi-lock"></i> Password
+        </label>
+      </div>
+      
+      <button type="submit"  id="loginbutton">Login</button><br>
+  
+  
+  
+  
+      <button class="share">
+        <div class="sharebutton">
+            <i class="bi bi-arrow-right"></i></div>
+  
+  
+  
+        <div class="hover-texticon">
+            <div class="containericon">
+                <a href="#" class="social-icon">
+                    <div class="card card1">
+                        <i class="bi bi-google"></i>  
+                    </div>
+                </a>
+                <a href="#" class="social-icon">
+                    <div class="card card2">
+                        <i class="bi bi-facebook"></i>
+                    </div>
+                </a>
+               
+              
+                <a href="#" class="social-icon">
+                    <div class="card card3">
+                        <i class="bi bi-linkedin"></i>
+                    </div>
+                </a>
+                <a href="#" class="social-icon">
+                    <div class="card card4">
+                        <i class="bi bi-instagram"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </button>
+  
+                            </form>
+                        </div>
+                    </div>
+                </ng-container>
+  
+                <ng-container *ngIf="currentForm === 'signup'">
+                    <div class="containers bounce-in">
+                        <i class="bi bi-x-circle" (click)="closeForm()" id="close"></i>
+                        <div class="box">
+                            <span class="borderline"></span>
+                            <form (ngSubmit)="onSubmitSignUp()" #signUpForm="ngForm">
+                                <h2>Signup</h2>
+                                <div class="input-group">
+                                    <input type="text" id="username" [(ngModel)]="username" name="username" required>
+                                    <label for="username">
+                                        <i class="bi bi-person"></i> Username
+                                    </label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="email" id="email" [(ngModel)]="email" name="email" required>
+                                    <label for="email">
+                                        <i class="bi bi-envelope"></i> Email Address
+                                    </label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="password" id="password" [(ngModel)]="password" name="password" required>
+                                    <label for="password">
+                                        <i class="bi bi-lock"></i> Password
+                                    </label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+                                    <label for="confirmPassword">
+                                        <i class="bi bi-lock"></i> Confirm Password
+                                    </label>
+                                </div>
+                                <button type="submit" id="loginbutton" >SignUp</button>
+                                <button class="share">
+                                    <div class="sharebutton">
+                                        <i class="bi bi-arrow-right"></i></div>
+                            
+                            
+                            
+                                    <div class="hover-texticon">
+                                        <div class="containericon">
+                                            <a href="#" class="social-icon">
+                                                <div class="card card1">
+                                                    <i class="bi bi-google"></i>  
+                                                </div>
+                                            </a>
+                                            <a href="#" class="social-icon">
+                                                <div class="card card2">
+                                                    <i class="bi bi-facebook"></i>
+                                                </div>
+                                            </a>
+                                           
+                                          
+                                            <a href="#" class="social-icon">
+                                                <div class="card card3">
+                                                    <i class="bi bi-linkedin"></i>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="social-icon">
+                                                <div class="card card4">
+                                                    <i class="bi bi-instagram"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </ng-container>
+                
+        
+                 <!-- Forgot Password Form -->
+            <ng-container *ngIf="currentForm === 'Forget'">
+                <div class="containers bounce-in">
+                    <i class="bi bi-x-circle" (click)="closeForm()" id="close"></i>
+                    <div class="box">
+                        <span class="borderline"></span>
+                        <form (ngSubmit)="onSubmitForget()" #forgetForm="ngForm">
+                            <h2>Forgot Password</h2>
+                            <div class="input-group">
+                                <input type="email" id="email" [(ngModel)]="email" name="email" required>
+                                <label for="email">
+                                    <i class="bi bi-envelope"></i> Email Address
+                                </label>
+                            </div>
+                            <button type="submit" id="loginbutton">send</button>
+  
+  
+                            <button class="share">
+                                <div class="sharebutton">
+                                    <i class="bi bi-arrow-right"></i></div>
+                        
+                        
+                        
+                                <div class="hover-texticon">
+                                    <div class="containericon">
+                                        <a href="#" class="social-icon">
+                                            <div class="card card1">
+                                                <i class="bi bi-google"></i>  
+                                            </div>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <div class="card card2">
+                                                <i class="bi bi-facebook"></i>
+                                            </div>
+                                        </a>
+                                       
+                                      
+                                        <a href="#" class="social-icon">
+                                            <div class="card card3">
+                                                <i class="bi bi-linkedin"></i>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <div class="card card4">
+                                                <i class="bi bi-instagram"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </button>
+  
+                        </form>
+                    </div>
+                </div>
+            </ng-container>
+  
+            <!-- OTP Form -->
+            <ng-container *ngIf="currentForm === 'Otp'">
+                <div class="containers bounce-in">
+                    <i class="bi bi-x-circle" (click)="closeForm()" id="close"></i>
+                    <div class="box">
+                        <span class="borderline"></span>
+                        <form (ngSubmit)="onSubmitOtp()" #otpForm="ngForm">
+                            <h2>Enter OTP</h2>
+                            <div class="input-group">
+                                <input type="text" id="otp" [(ngModel)]="otp" name="otp" required>
+                                <label for="otp">
+                                    <i class="bi bi-key"></i> OTP
+                                </label>
+                            </div>
+                            <button type="submit" id="loginbutton">Submit </button>
+                        </form>
+                    </div>
+                </div>
+            </ng-container>
+  
+            <!-- Reset Password Form -->
+            <ng-container *ngIf="currentForm === 'Reset'">
+                <div class="containers bounce-in">
+                    <i class="bi bi-x-circle" (click)="closeForm()" id="close"></i>
+                    <div class="box">
+                        <span class="borderline"></span>
+                        <form (ngSubmit)="onSubmitReset()" #resetForm="ngForm">
+                            <h2>Reset Password</h2>
+                            <div class="input-group">
+                                <input type="password" id="newPassword" [(ngModel)]="newPassword" name="newPassword" required>
+                                <label for="newPassword">
+                                    <i class="bi bi-lock"></i> New Password
+                                </label>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" id="confirmNewPassword" [(ngModel)]="confirmNewPassword" name="confirmNewPassword" required>
+                                <label for="confirmNewPassword">
+                                    <i class="bi bi-lock"></i> Confirm New Password
+                                </label>
+                            </div>
+                            <button type="submit" id="loginbutton1">Reset Password</button>
+                        </form>
+                    </div>
+                </div>
+            </ng-container>
+  
+  
+  <!-- Display success or error messages -->
+  <div *ngIf="successMessage">
+    <p>{{ successMessage }}</p>
+    <button (click)="displayContent('signin')">OK</button>
+  </div>
+  <div *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
+  
+  
+            </div>
+        </div>
+  </div>

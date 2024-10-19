@@ -1,0 +1,77 @@
+<header [class.scrolled]="scrolled">
+  <a href="#" class="logo"><img src="../../assets/221bb86f-4edf-4031-92ea-e0ad700fefea-removebg-preview.png" alt="" width="100px" height="60px"></a>
+  <div>
+    <div class="menu-icon" (click)="toggleMenu()">
+      <i class="bi bi-list" id="menu-icon"></i>
+    </div>
+    <div class="navbar" id="navbar">
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/products">Product</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main">
+
+    <a (click)="toggleSearchContainers()" class="search">
+      <svg style="fill:#e3dede; height: 25px;width: 25px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+      </svg>
+    </a>
+    <a routerLink="/slidebar" class="cart">
+      <i class="bi bi-cart"></i>
+      <span class="cart-count" *ngIf="cartItemCount > 0">{{ cartItemCount }}</span>
+    </a>
+    <a routerLink="/wishlist" class="save"><i class="bi bi-bookmark"></i></a>
+<div class="dropdown">
+  <i class="bi bi-person-circle flip-icon"></i>
+<div class="dropdown-content">
+  <a routerLink="/profile" class="dropdown-item"><i class="bi bi-person"></i> Profile</a>
+  <a routerLink="/signin" class="dropdown-item"><i class="bi bi-box-arrow-in-left"></i>Login</a>
+  <a routerLink="#" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</a>
+</div>
+</div>  
+
+  </div>
+  <!-- .......Info-icon start.... -->
+  <div class="info-icon-container">
+    <a routerLink="/information"><i style="fill:#fff" class="bi bi-info-circle"></i></a>
+</div>
+<!-- ..........end............ -->
+</header>
+
+<div class="search-container1" id="search1" [class.visible]="isSearchVisible">
+  <input 
+    class="input" 
+    type="text" 
+    placeholder="Search For Products..." 
+    [(ngModel)]="searchTerm" 
+    (input)="filterItems()" 
+    (focus)="showDropdown = true"
+   
+    
+  />
+  <div class="dropdown1" *ngIf="showDropdown">
+    <div class="suggestions">
+      <div *ngFor="let item of filteredItems" (mousedown)="selectItem(item)">
+        <span class="search-icon"><i class="bi bi-search"></i></span>{{ item }}
+      </div>
+    </div>
+  </div>
+
+  <select name="item" id="" class="search-container2" [(ngModel)]="selectedCategory">
+    <option value="products">Products</option>
+    <option value="electronics">Electronics</option>
+    <option value="sofaset">sofaset</option>
+    <option value="groceries">Groceries</option>
+    <option value="home-appliances">Home Appliances</option>
+    <option value="toys">Toys</option>
+    <option value="beauty">Beauty</option>
+    <option value="others">Others</option>
+  </select>
+  <button (click)="searchContent()" class="button">
+    Search
+  </button> 
+</div>

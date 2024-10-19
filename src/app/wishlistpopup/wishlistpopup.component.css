@@ -1,0 +1,7 @@
+.modal {
+    z-index: 1000; 
+  }
+  
+  .form-popup {
+    z-index: 2000; 
+  }

@@ -1,0 +1,215 @@
+/* General styles for the container and carousel */
+.container {
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid white;
+  margin: 30px;
+  margin-left: 3px;
+  margin-right: 3px;
+  height: 420px;
+}
+
+.see {
+  display: flex;
+  justify-content: end;
+}
+
+.see a {
+  text-decoration: none;
+}
+
+.but {
+  margin-top: 60px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(128, 121, 121);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 300px;
+  margin-right: 40px;
+  text-decoration: none;
+}
+
+.carousel-container {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 0px;
+}
+
+.slide {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.card {
+  height: 350px;
+  width: 350px;
+  margin: 40px auto;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: rgb(221, 11, 46);
+  text-decoration: none;
+  /* margin-left: 100px; */
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 10px;
+  color: black;
+}
+
+.card-img-top {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 30px;
+  width: 290px;
+  height: 270px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Responsive Styles */
+/* @media (min-width: 768px) {
+  .slide {
+    max-width: 50%;
+    flex: 0 0 100%;
+  }
+  .card {
+    max-width: 78%;
+    flex: 0 0 100%;
+    margin: 10px;
+    height: 340px;
+    margin-left: 0px;
+  }
+  .card-img-top {
+    width: 90%;
+    height: 250px;
+    margin-left: 0;
+    margin-left: 15px;
+    margin-bottom: 5px;
+  }
+  .but {
+    margin-top: 0px;
+    bottom: 190px;  
+    margin-right: 5px;
+  }
+  .card-title {
+    display: flex;
+    text-decoration: none;
+    margin-top: 0px;
+  }
+} */
+
+@media (min-width: 992px) {
+  .slide {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slide {
+    flex: 0 0 23%;
+    max-width: 23%;
+  }
+}
+
+
+
+
+@media (min-width: 1440px) {
+  .slide {
+    overflow: hidden;
+    gap: 10px;
+  }
+  .card {
+    max-width: 100%;
+    flex: 0 0 23%;
+    gap: 10px;
+  }
+  .card-img-top {
+    right: 30px;
+  }
+}
+
+/* For screens between 375px and 425px */
+@media (max-width: 425px) {
+  .slide {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .card {
+    max-width: 76%;
+    flex: 0 0 100%;
+    margin: 10px;
+    height: 280px;
+    margin-left: 0px;
+  }
+  .card-img-top {
+    width: 90%;
+    height: 250px;
+    margin-left: 0;
+    margin-left: 15px;
+    margin-bottom: 5px;
+  }
+  .but {
+    margin-top: 0px;
+    bottom: 160px;  
+    margin-right: 5px;
+  }
+  .card-title {
+    display: flex;
+    text-decoration: none;
+    margin-top: -40px;
+  }
+}
+
+/* For screens 375px and below */
+@media (max-width: 375px) {
+  .card {
+    max-width: 76%;
+    flex: 0 0 100%;
+    margin: 10px;
+    height: 280px;
+    margin-left: 0px;
+  }
+  .card-img-top {
+    width: 90%;
+    height: 250px;
+    margin-left: 0;
+    margin-left: 15px;
+    margin-bottom: 5px;
+  }
+  .but {
+    margin-top: 0px;
+    bottom: 160px; 
+    margin-right: 0px;
+  }
+  .card-title {
+    display: flex;
+    text-decoration: none;
+    margin-top: -40px;
+  }
+}

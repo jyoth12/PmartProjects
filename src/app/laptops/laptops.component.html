@@ -1,0 +1,173 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-3" style="max-width: 640px;">
+
+        <a routerLink="/applelaptops">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../assets/laptops/apple.jpeg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Apple Laptops</h5>
+              <p class="card-text">Apple Macbook air pro with core i5 and i3 laptops.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-3" style="max-width: 640px;">
+       <a routerLink="/hplaptops">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../assets/laptops/laptop3.jpeg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">HP Laptops</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-3" style="max-width: 640px;">
+<a routerLink="/dellaptops">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../assets/laptops/dell.jpeg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dell Laptops</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+</a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-3" style="max-width: 640px;">
+<a routerLink="/lenovalaptop">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../assets/laptops/Lenova.jpeg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Lenovo Laptops</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-3" style="max-width: 640px;">
+          <a routerLink="/applelaptops">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="../assets/laptops/microsoft.jpeg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Microsoft Laptops</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+    </a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-3" style="max-width: 640px;">
+ <a routerLink="/hplaptops">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="../assets/laptops/Acer.jpeg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Acer Laptops</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-3" style="max-width: 640px;">
+<a routerLink="/dellaptops">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="../assets/laptops/ASUS.jpeg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">ASUS LAPTOPS</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-3" style="max-width: 640px;">
+ <a routerLink="/lenovalaptop">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="../assets/laptops/honor.jpeg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Honor Laptops</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+      </a>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+<!-- laptops.component.html -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-6" *ngFor="let laptop of laptops">
+      <div class="card mb-3" style="max-width: 640px;">
+          <a [routerLink]="laptop.brand === 'Dell' ? ['/dellaptops'] : ['/otherlaptops', laptop.id]" style="text-decoration: none;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img [src]="laptop.image_url" class="img-fluid rounded-start" alt="{{laptop.title}}">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{laptop.title}}</h5>
+                <p class="card-text">{{laptop.description}}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,128 @@
+
+<!--  Card container sart -->
+<section class="shop containers">
+    <!-- Login form popup  wish list -->
+    <div class="form-popup" [ngClass]="{'show': showLoginForm}">
+     <div class="form-box">
+         <div class="login">
+           <button class="close-button2" (click)="hideLoginPopup()">
+             <i class="bi bi-x"></i>
+           </button>
+           
+             <h2>PMART - ENTERPRISES</h2>
+             <h3>Login</h3>
+             <h5>Get access to your Orders,<br/>Wishlist and Recommendations</h5>
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl5DCe8fiRK0rk5yfgcvY9QReIuwXmsPt9pw&s" alt="">
+         </div>
+         <div class="form-content">
+             <form>
+                 <div class="input-field">
+                     <label for="email">Enter Email/Mobile Number</label><br/><br/>
+                     <input type="text" name="email" id="email">
+                 </div><br/>
+                 <p>By continuing, you agree to PMART Enterprises Terms of Use and Privacy Policy.</p>
+                 <button type="button">Request OTP</button>
+                 <p class="text">New to PMART Enterprises? <a href="register.html">Create an account</a></p>
+             </form>
+         </div>
+     </div>
+   </div>
+     <!-- card start -->
+       <div class="shop-content">
+         <!-- product box start -->
+         <div class="product-box" *ngFor="let product of products">
+           <img [src]="product.imageUrl" alt="" class="product-img">
+           <h2 class="product-title">{{ product.title }}</h2>
+           <span class="price">{{ product.price }}</span>
+           <i class="bi bi-heart add-heart" (click)="showLoginPopup(); closeAdditionalContent(product)"></i>
+           <!-- hover quick view button inside a card -->
+           <button class="quick-view-btn" (click)="showAdditionalContent(product)">Quick View</button>
+         
+   
+           <!-- Modal for additional content -->
+             <!-- popup background blur -->
+           <div class="modal" *ngIf="product.showAdditionalContent">
+           <!-- popup box shadow in "#fff" -->
+             <div class="modal-content">
+               <!-- show and hidden in modal popup usin x-icon -->
+               <button class="close-button" (click)="closeAdditionalContent(product)">
+                <i class="bi bi-x"></i> 
+              </button>   
+  
+              
+               <div class="container flex">
+                 <div class="left">
+                   <!-- popup in main image -->
+                   <div class="main_image">
+                     <img [src]="product.mainImageSrc || product.imageUrl" alt="Product Image" class="slide">
+                     <i class="bi bi-heart heart-icon" (click)="showLoginPopup()"></i>
+                   </div>  
+                     <!--  popup option images -->         
+                   <div class="option flex">   
+                       <!-- Example options, modify as per your product data -->              
+                       <img *ngFor="let option of product.options" [src]="option.imageUrl" alt="" (mouseover)="changeMainImage(product, option.imageUrl)">
+                   </div>
+                 </div>     
+                 <!-- popup details -->
+                 <div class="right">          
+                   <h3>{{ product.title }}</h3>             
+                   <h4><small>Price:</small> {{ product.price }}</h4>
+                   <p>{{ product.description }}</p>
+                   <h5>Available colors:</h5>
+                   <!-- popup inside a circle colors -->
+                   <div class="color-flex">
+                     <span *ngFor="let color of product.colors"
+                           (mouseover)="changeColor(product, color)"
+                           [style.background-color]="color.backgroundColor"
+                           [class.active]="color.active">
+                     </span>
+                   </div>
+                   
+
+                   <div class="size">
+                    <p>size:</p>
+                    <div *ngFor="let sizeOption of product.size" class="psize"
+                         [class.active]="sizeOption.label === product.selectedsize" 
+                         (click)="selectsize(product, sizeOption.label)">
+                      {{ sizeOption.label }}
+                    </div>
+                  </div>
+                  <div class="Thickness">
+                    <p>Thickness:</p>
+                    <div *ngFor="let thicknessOption of product.Thickness" class="pThickness"
+                         [class.active]="thicknessOption.label === product.selectedThickness"
+                         (click)="selectThickness(product, thicknessOption.label)">
+                      {{ thicknessOption.label }}
+                    </div>
+                </div>
+             
+                  <div class="Dimension">
+                    <p>Dimension (L" x W"):</p>
+                    <div *ngFor="let DimensionOption of product.Dimension" class="pconnectivity" [class.active]="DimensionOption.label === product.selectedDimension"
+                     (click)="selectConnectivity(product, DimensionOption.label)">
+                      {{ DimensionOption.label }}
+                    </div>
+                  </div>
+
+                   <!-- add to cart button -->
+                   <div class="btn-box">              
+                    <button class="btn" (click)="addToCart(product)">
+                      <i class="bi bi-cart2"></i> Add to cart
+                    </button>
+                    
+                     <!-- buy now -->
+                     <a routerLink="/placeorder">
+                      <button class="buy-btn">
+                        <i class="bi bi-lightning-charge"></i>Place Order
+                      </button>
+                    </a>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- End modal for additional content -->
+         </div>
+       </div>
+     </section>
+     <!-- card container end -->

@@ -1,0 +1,77 @@
+<section class="shop containers">
+    <div class="shop-content">
+      <div class="product-box" *ngFor="let product of products">
+        <img [src]="product.imageUrl" alt="" class="product-img">
+        <h2 class="product-title">{{ product.title }}</h2>
+        <span class="price">{{ product.price }}</span>
+        <i class="bi bi-heart add-heart"></i>
+        <button class="quick-view-btn" (click)="toggleAdditionalContent(product)">Quick View</button>
+        <div class="modal" *ngIf="product.showAdditionalContent">
+          <div class="modal-content">
+            <button class="close-button" (click)="closeAdditionalContent(product)">
+              <i class="bi bi-x"></i>
+            </button>      
+            <div class="container flex">
+              <div class="left">
+                <div class="main_image">
+                  <img [src]="product.mainImageSrc || product.imageUrl" alt="Product Image" class="slide">
+                  <i class="bi bi-heart heart-icon"></i>
+                </div>           
+                <div class="option flex">             
+                    <img *ngFor="let option of product.options" [src]="option.imageUrl" alt="" (mouseover)="changeMainImage(product, option.imageUrl)">
+                </div>
+              </div>           
+              <div class="right">          
+                <h3>{{ product.title }}</h3>             
+                <h4><small>Price:</small> {{ product.price }}</h4>
+                <p>{{ product.description }}</p>
+                <h5>Available colors:</h5>
+                <div class="color-flex">
+                  <span *ngFor="let color of product.colors"
+                        (mouseover)="changeColor(product, color)"
+                        [style.background-color]="color.backgroundColor"
+                        [class.active]="color.active">
+                  </span>
+                </div>
+                <h5>Quantity</h5>
+                <div class="add flex1">
+                  <span (click)="decreaseQuantity(product)">-</span>
+                  <label>{{ product.quantity }}</label>
+                  <span (click)="increaseQuantity(product)">+</span>
+                </div>
+                <div class="size">
+                  <p>Screen Size:</p>
+                  <div *ngFor="let size of product.sizes"
+                       class="psize"
+                       [class.active]="product.selectedSize === size.label"
+                       (click)="selectSize(product, size.label)">
+                    {{ size.label }}
+                  </div>
+                </div>
+                <div class="ram">
+                  <p>System Memory:</p>
+                  <div *ngFor="let ramOption of product.ram"
+                       class="pram"
+                       [class.active]="product.selectedRam === ramOption.label"
+                       (click)="selectRam(product, ramOption.label)">
+                    {{ ramOption.label }}
+                  </div>
+                </div>             
+                <div class="btn-box">              
+                 <button class="btn" (click)="addToCart(product)">
+                    <i class="bi bi-cart2"></i>Add to cart
+                  </button>
+                  <a routerLink="/placeorder">
+                    <button class="buy-btn">
+                      <i class="bi bi-lightning-charge"></i>Place Order
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End modal for additional content -->
+      </div>
+    </div>
+  </section>

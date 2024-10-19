@@ -1,0 +1,13 @@
+<div class="wrapper" [ngClass]="{'show': consentVisible}">
+  <header>
+    <i class="bi bi-cookie"></i>
+    <h2>Cookies Consent</h2>
+  </header>
+  <div class="data">
+    <p>This website uses cookies to ensure you get the best experience on our website. <a routerLink="/privacypolicy">Learn more</a></p>
+  </div>
+  <div class="buttons">
+    <a routerLink="/home"><button class="button accept" (click)="handleAccept()">Accept</button></a>
+    <button class="button decline" (click)="handleDecline()">Decline</button>
+  </div>
+</div>

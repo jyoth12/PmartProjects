@@ -1,0 +1,51 @@
+<div class="form-container">
+    <form id="address-form">
+        <h2>Edit Address Details</h2>
+        
+        <label for="name">Name*</label>
+        <input id="name" name="name" type="text" value="xxx" required>
+
+        <label for="mobile">Mobile*</label>
+        <input id="mobile" name="mobile" type="text" value="xxx" required>
+
+        <label for="pinCode">Pin Code*</label>
+        <input id="pinCode" name="pinCode" type="text" value="xxx" required>
+
+        <label for="locality">Locality / Area / Street*</label>
+        <input id="locality" name="locality" type="text" value="xxxx" required>
+
+        <label for="flatNumber">Flat number / Building Name*</label>
+        <input id="flatNumber" name="flatNumber" type="text" value="xxx" required>
+
+        <label for="landmark">Landmark</label>
+        <input id="landmark" name="landmark" type="text" value="xxx">
+
+        <label for="districtCity">District/City*</label>
+        <input id="districtCity" name="districtCity" type="text" value="xxxx" required>
+
+        <label for="state">State*</label>
+        <input id="state" name="state" type="text" value="xxxx" required>
+
+        <label>Address Type</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="addressType" value="home" checked> Home
+            </label>
+            <label>
+                <input type="radio" name="addressType" value="work"> Work
+            </label>
+            <label>
+                <input type="radio" name="addressType" value="others"> Others
+            </label>
+        </div>
+
+        <!-- <label class="checkbox-group">
+            <input type="checkbox" name="defaultAddress" checked> Make as default Address
+        </label> -->
+
+        <div class="button-group">
+            <button type="reset">RESET</button>
+            <button type="submit">SAVE</button>
+        </div>
+    </form>
+</div>

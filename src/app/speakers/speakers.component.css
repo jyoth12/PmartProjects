@@ -1,0 +1,14 @@
+.container {
+    max-width: 80%;
+    box-sizing: border-box;
+    border: 1px solid white;
+    margin: 30px auto;
+    padding: 10px;
+  }
+  .card mb-3{
+   background-color: black;
+  }
+  .col-md-4 img{
+      width: 200px;
+      height: 200px;
+  }

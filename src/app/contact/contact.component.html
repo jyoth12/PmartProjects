@@ -1,0 +1,81 @@
+<div class="container">
+    <!-- Contact Info Section -->
+    <div class="contactinfo">
+      <img src="/assets/pmlogo.jpeg" alt="Contact Info Image" class="image-front">
+      <div class="vertical-line"></div>
+      <div class="info-content">
+        <div class="logo"><img src="/assets/pmartenterprises" alt="Company Logo"></div>
+      </div>
+    </div>
+  
+    <!-- Flip Container -->
+    <div class="flip-container">
+      <div class="flip-card" [ngClass]="{'flipped': isFlipped}">
+        <div class="flip-card-inner">
+          <!-- Front Side (Contact Form) -->
+          <div class="flip-card-front">
+            <div class="contactForm">
+              <h2>Send a Message</h2>
+              <form class="formBox" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+                <div class="inputBox w50">
+                  <input type="text" name="name" ngModel required>
+                  <span>Name</span>
+                </div>
+                <div class="inputBox w50">
+                  <input type="email" name="email" ngModel required>
+                  <span>Email</span>
+                </div>
+                <div class="inputBox w50">
+                  <input type="text" name="subject" ngModel required>
+                  <span>Subject</span>
+                </div>
+                <div class="inputBox w200">
+                  <textarea name="message" placeholder="Type your message here..." rows="4" class="form-group" ngModel required></textarea>
+                </div>
+                <div>
+                  <button class="btn" type="submit">Send</button>
+                </div>
+            
+                <div class="success-message" *ngIf="successMessage">
+                  <i class="bi bi-check-circle"></i> {{ successMessage }}
+                </div>
+              </form>
+            </div>
+            
+          </div>
+  
+          <!-- Back Side (Contact Information) -->
+          <div class="flip-card-back">
+            <div id="bottomborder" class="bottomborder" [ngClass]="{'visible': isBorderVisible}">
+              <h2>Contact Information</h2>
+              <ul class="info">
+                <li>
+                  <span><i id="icons-up" class="bi bi-geo-alt"></i></span>
+                  <span>Bangara Hills, Road No.10<br>Hyderabad</span>
+                </li>
+                <li>
+                  <span><i id="icons-up" class="bi bi-telephone"></i></span>
+                  <span>+123 456 789</span>
+                </li>
+                <li>
+                  <span class="note">Note:</span>
+                  <span>We will revert to you via email within 48 hours</span>
+                </li>
+                <li>
+                  <span><i id="icons-up" class="bi bi-envelope"></i></span>
+                  <span>pmartech&#64;gmail.com</span>
+                </li>
+              </ul>
+              <ul class="sci">
+                <li><a href="https://www.facebook.com/"><i id="icon" class="bi bi-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i id="icon" class="bi bi-instagram"></i></a></li>
+                <li><a href="https://www.twitter.com"><i id="icon" class="bi bi-twitter"></i></a></li>
+                <li><a href="https://www.google.com/"><i id="icon" class="bi bi-google"></i></a></li>
+                <li><a href="https://www.linkedin.com/"><i id="icon" class="bi bi-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

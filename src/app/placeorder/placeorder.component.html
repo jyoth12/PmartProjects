@@ -1,0 +1,199 @@
+<div class="container">
+    <div class="delivery-section">
+      <h2>Delivery</h2>
+      <label>Please add your delivery address.</label>
+      <button class="new-address" (click)="toggleNewAddressPopup()">+ New Address</button>
+    </div>
+  
+    <div class="payment-section">
+      <h2>Payment Details</h2>
+      <p>Please select your payment method.</p>
+      <div class="menu-content">
+        <div class="menu">
+          <button data-target="credit-debit-card" (click)="showContent('credit-debit-card')">Credit/Debit Card</button>
+          <button data-target="netbanking" (click)="showContent('netbanking')">NetBanking</button>
+          <button data-target="wallet" (click)="showContent('wallet')">Wallet</button>
+          <button data-target="upi" (click)="showContent('upi')">UPI</button>
+          <button data-target="emi" (click)="showContent('emi')">EMI</button>
+        </div>
+  
+        <div class="content">
+          <div id="credit-debit-card" class="hidden">
+            <h2>Credit/Debit Card</h2>
+            <form class="card-form">
+              <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+              </div>
+              <div class="form-group">
+                <label for="cardName">Cardholder Name</label>
+                <input type="text" id="cardName" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="expiryDate">Expiry Date</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY" required>
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" required>
+              </div>
+              <button type="submit" class="submit-card">Submit</button>
+            </form>
+          </div>
+  
+          <div id="netbanking" class="hidden">
+            <h2>NetBanking</h2>
+            <div class="bank-logos">
+              <img src="assets/bankimages/hdfc.png" alt="hdfc" onclick="redirectToBank('hdfc')">
+              <img src="assets/bankimages/sbi.jpeg" alt="SBI Bank" onclick="redirectToBank('sbi')">
+              <img src="assets/bankimages/axis.png" alt="Axis Bank" onclick="redirectToBank('axis')">
+              
+              <!-- Add more bank logos as needed -->
+            </div>
+            <form class="netbanking-form">
+              <div class="form-group">
+                <label for="bankName">Bank Name</label>
+                <input type="text" id="bankName" placeholder="Enter your bank name" required>
+              </div>
+              <div class="form-group">
+                <label for="accountNumber">Account Number</label>
+                <input type="text" id="accountNumber" placeholder="Enter your account number" required>
+              </div>
+              <div class="form-group">
+                <label for="ifscCode">IFSC Code</label>
+                <input type="text" id="ifscCode" placeholder="Enter your IFSC code" required>
+              </div>
+              <button type="submit" class="submit-bank">Submit</button>
+            </form>
+          </div>
+
+          <div id="wallet" class="hidden">
+            <h2>Wallet</h2>
+            <div class="wallet-logos">
+              <img src="assets/bankimages/paytm.png" alt="Paytm" onclick="selectWallet('Paytm')">
+              <img src="assets/bankimages/phonepe.jpeg" alt="PhonePe" onclick="selectWallet('PhonePe')">
+              <img src="assets/bankimages/mobikwik.png" alt="Mobikwik" onclick="selectWallet('Mobikwik')">
+              <!-- Add more wallet logos as needed -->
+          </div>
+            <form class="wallet-form">
+              <div class="form-group">
+                <label for="walletProvider">Wallet Provider</label>
+                <input type="text" id="walletProvider" placeholder="Enter your wallet provider" required>
+              </div>
+              <div class="form-group">
+                <label for="walletNumber">Wallet Number</label>
+                <input type="text" id="walletNumber" placeholder="Enter your wallet number" required>
+              </div>
+              <button type="submit" class="submit-wallet">Submit</button>
+            </form>
+          </div>
+          <div id="upi" class="hidden">
+            <h2>UPI</h2>
+            <div class="upi-logos">
+              <img src="assets/bankimages/phonepe.jpeg" alt="PhonePe" onclick="selectWallet('PhonePe')">
+              <img src="assets/bankimages/paytm.png" alt="Paytm" onclick="selectWallet('Paytm')">
+              <img src="assets/bankimages/google pay.jpeg" alt="Paytm" onclick="selectUPI('google pay')">
+              <!-- Add more UPI logos as needed -->
+          </div>
+            <form class="upi-form">
+              <div class="form-group">
+                <label for="upiId">UPI ID</label>
+                <input type="text" id="upiId" placeholder="Enter your UPI ID" required>
+              </div>
+              <button type="submit" class="submit-upi">Submit</button>
+            </form>
+          </div>
+          <div id="emi" class="hidden">
+            <h2>EMI</h2>
+            <div class="emi-logos">
+              <img src="assets/bankimages/bajaj.jpeg" alt="Bajaj Finserv" onclick="selectEMI('Bajaj Finserv')">
+              <img src="assets/bankimages/hdfc.png" alt="hdfc" onclick="redirectToBank('hdfc')">
+              <img src="assets/bankimages/icici.png" alt="ICICI Bank" onclick="selectEMI('ICICI Bank')">
+              <!-- Add more EMI logos as needed -->
+          </div>
+            <form class="emi-form">
+              <div class="form-group">
+                <label for="emiProvider">EMI Provider</label>
+                <input type="text" id="emiProvider" placeholder="Enter your EMI provider" required>
+              </div>
+              <div class="form-group">
+                <label for="emiPlan">EMI Plan</label>
+                <input type="text" id="emiPlan" placeholder="Enter your EMI plan details" required>
+              </div>
+              <button type="submit" class="submit-emi">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="order-summary">
+      <div class="summary-item">
+        <p class="description">Subtotal:</p>
+        <p class="cost">&#8377;{{ subtotal.toFixed(2) }}</p>
+      </div>
+      <div class="summary-item">
+        <p class="description">Delivery charges:</p>
+        <p class="cost">&#8377;{{ postage.toFixed(2) }}</p>
+      </div>
+      <div class="summary-item total">
+        <p class="description"><strong>Order Total:</strong></p>
+        <p class="cost"><strong>&#8377;{{ total.toFixed(2) }}</strong></p>
+      </div>
+    </div>
+  
+    <button class="buy-now" (click)="onBuyNow()">Buy Now</button>
+    <p>By placing your order you agree to PMART Enterprises Terms and Conditions.</p>
+  
+    
+  
+  
+
+    <div *ngIf="showNewAddressPopup" class="popup-form">
+      <div class="popup-overlay" (click)="toggleNewAddressPopup()"></div>
+      <div class="popup-content">
+        <h2>Add New Address</h2>
+        <form class="address-form">
+          <label for="name">Name*</label>
+        <input id="name" name="name" type="text" required>
+    
+        <label for="mobile">Mobile*</label>
+        <input id="mobile" name="mobile" type="text" required>
+    
+        <label for="pinCode">Pin Code*</label>
+        <input id="pinCode" name="pinCode" type="text" required>
+    
+        <label for="locality">Locality / Area / Street*</label>
+        <input id="locality" name="locality" type="text" required>
+    
+        <label for="flatNumber">Flat number / Building Name*</label>
+        <input id="flatNumber" name="flatNumber" type="text" required>
+    
+        <label for="landmark">Landmark</label>
+        <input id="landmark" name="landmark" type="text">
+    
+        <label for="districtCity">District/City*</label>
+        <input id="districtCity" name="districtCity" type="text" required>
+    
+        <label for="state">State*</label>
+        <input id="state" name="state" type="text" required>
+    
+        <label>Address Type</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="addressType" value="home" checked> Home
+          </label>
+          <label>
+            <input type="radio" name="addressType" value="work"> Work
+          </label>
+          <label>
+            <input type="radio" name="addressType" value="others"> Others
+          </label>
+        </div>
+          <button type="submit" class="submit-address">Submit</button>
+        </form>
+        <button class="close-popup" (click)="toggleNewAddressPopup()">Close</button>
+      </div>
+  </div>
+  </div>

@@ -1,0 +1,62 @@
+<input type="file" id="galleryInput" accept="image/*" style="display:none;" (change)="handleFileSelect($event)">
+<div class="profilecontainer">
+<div class="circle" (click)="openProfilePhotoOptions()">
+<ng-container *ngIf="selectedProfilePhoto; else defaultIcon">
+  <img [src]="selectedProfilePhoto" alt="Profile Photo" class="profile-photo">
+</ng-container>
+<ng-template #defaultIcon>
+  <i class="bi bi-camera"></i>
+</ng-template>
+</div>
+
+<div class="profile-photo-options" *ngIf="showProfilePhotoOptions">
+<div *ngIf="!isCameraActive">
+  <label class="option" (click)="startCamera()">
+    <i class="bi bi-camera"></i>
+    <span>Open Camera</span>
+  </label>
+  <label for="galleryInput" class="option">
+    <i class="bi bi-image"></i>
+    <span>Gallery</span>
+  </label>
+  <input type="file" id="galleryInput" accept="image/*" style="display:none;" (change)="handleFileSelect($event)">
+</div>
+<div *ngIf="isCameraActive">
+  <video #video width="320" height="240" autoplay></video>
+  <button (click)="capturePhoto()">Capture Photo</button>
+  <canvas #canvas width="320" height="240" style="display:none;"></canvas>
+</div>
+</div>
+
+<div class="data">
+<label for="firstName">User FirstName</label><br>
+<input type="text" id="firstName" [(ngModel)]="user.firstName"><br>
+
+<label for="lastName">User LastName</label><br>
+<input type="text" id="lastName" [(ngModel)]="user.lastName"><br>
+
+<label for="gender">Gender</label><br>
+<input type="radio" name="gender" value="Female" [(ngModel)]="user.gender">Female
+<input type="radio" name="gender" value="Male" [(ngModel)]="user.gender">Male<br>
+
+<label for="email">Email Id</label><br>
+<input type="text" id="email" [(ngModel)]="user.email"><br>
+
+<label for="mobile">Mobile Number</label><br>
+<input type="text" id="mobile" [(ngModel)]="user.mobile"><br>
+
+<label for="password">Password</label><br>
+<input type="password" id="password" [(ngModel)]="user.password"><br>
+
+<label for="confirmPassword">Confirm Password</label><br>
+<input type="password" id="confirmPassword" [(ngModel)]="user.confirmPassword"><br>
+
+<label for="pincode">Pin Code</label><br>
+<input type="text" id="pincode" [(ngModel)]="user.pincode"><br>
+
+<label for="address">Address</label><br>
+<textarea id="address" [(ngModel)]="user.address"></textarea><br>
+
+<button (click)="submit()">Submit</button>
+</div>
+</div>

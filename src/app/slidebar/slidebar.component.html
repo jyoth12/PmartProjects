@@ -1,0 +1,49 @@
+
+
+      <div class="container">
+        <h2>Your Cart</h2>
+        <ul *ngIf="cartService.getItems().length > 0; else emptyCart">
+          <li *ngFor="let item of cartService.getItems()">
+            <div class="cart-item">
+              <div class="cart-item-details">
+                <img [src]="item.imageUrl" alt="{{ item.title }}" class="cart-item-image" />
+                <div class="item-info">
+                  <div class="item-title">{{ item.title }}</div>
+                  <div class="item-description">{{ item.description }}</div>
+                  <div class="item-price">{{ calculateTotal(item) | currency:'INR':'symbol' }}</div>
+                </div>
+              </div>
+              <div class="quantity-input">
+                <label>Quantity:</label>
+                <div class="add flex1">
+                  <span (click)="decreaseQuantity(item)">-</span>
+                  <label>{{ item.quantity }}</label>
+                  <span (click)="increaseQuantity(item)">+</span>
+                </div>
+                <button (click)="removeFromCart(item)">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ng-template #emptyCart>
+          <div class="empty-cart">
+            <img src="assets/images/addtocartlogo.jpeg">
+            <p>Your cart is empty!</p>
+            <p>Explore our wide selection from PMART Enterprises</p>
+            <a routerLink="/products" style="text-decoration: none;">
+            <button (click)="emptyButtonClicked()" class="empty">shop now</button>
+            </a>
+          </div>
+        </ng-template>
+        <div *ngIf="cartService.getItems().length > 0" class="total">
+          <div class="total-title">Total:</div>
+          <div class="total-price">{{ calculateTotalCost() | currency:'INR':'symbol' }}</div>
+        </div>
+        <div *ngIf="cartService.getItems().length > 0" class="buy-container">
+          <a routerLink="/placeorder"><button (click)="buyButtonClicked()" class="buy">Place Order</button></a>
+          
+        </div>
+      </div>
+      

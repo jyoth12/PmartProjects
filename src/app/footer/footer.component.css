@@ -1,0 +1,222 @@
+
+/* Responsive Css Code created by : Shift Code Design */
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+p {
+  font-size: 16px;
+  line-height: 30px;
+  color: hsl(233, 100%, 98%);
+  font-weight: 300;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  font-weight: 400;
+  padding: 0;
+  color: hsl(180, 3%, 94%);
+}
+h2{
+  color: #fff;
+}
+
+a {
+  color: #dd5858;
+}
+
+.footer-big {
+  padding: 50px 0 50px 0;
+}
+
+.footer-big .footer-widget {
+  margin-bottom: 40px;
+}
+.quick{
+  margin-left: 15%;
+}
+.footer--light {
+  background:#fd0404;
+  padding-top: 0%;
+  position: relative;
+  top: 50px;
+}
+
+.footer-big .footer-menu ul li a,
+.footer-big p,
+.footer-big ul li {
+  color: #fff;
+}
+
+/* Responsive Css Code created by : Shift Code Design */
+
+.footer-menu {
+  padding-left: 30px;
+}
+
+.footer-menu ul li a {
+  font-size: 15px;
+  line-height: 25px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer-menu ul li a:hover {
+  color: hsl(245, 86%, 42%);
+}
+
+.footer-widget-title {
+  line-height: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.footer-widget-title .loc {
+  display: flex;
+  flex-direction: row;
+  margin-top: 6px;
+}
+
+.mini-footer {
+  background: black;
+  text-align: center;
+  padding: 5px 0;
+   height: 35px;
+}
+
+.mini-footer p {
+  margin: 0;
+  line-height: 26px;
+  font-size: 13px;
+  color: #e9e3e3;
+}
+
+.mini-footer p a {
+  color: #ce1a19;
+  font-weight: 500;
+}
+
+.mini-footer p a:hover {
+  color: #021511b1;
+}
+
+/* Responsive Css Code created by : Shift Code Design */
+
+.widget-about img {
+  display: block;
+  margin-bottom: 30px;
+  max-width: 40%;
+}
+
+.widget-about p {
+  font-weight: 400;
+}
+
+.widget-about .contact-details {
+  margin: 30px 0 0 0;
+}
+
+.widget-about .contact-details li {
+  margin-bottom: 10px;
+}
+
+.widget-about .contact-details li:last-child {
+  margin-bottom: 0;
+}
+
+.widget-about .contact-details li i {
+  padding-right: 10px;
+  color: hsl(120, 100%, 0%);
+}
+
+.widget-about .contact-details li a {
+  color: hsl(0, 45%, 6%);
+}
+.icons {
+  display:flex;
+  width:30%;
+  font-size: 25px;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: #ada9a9;
+  
+}
+.icons:hover{
+  color: #ffffff;
+}
+/* Responsive Css Code created by : Shift Code Design */
+
+.container3{
+  margin-left: 5%;
+  position: relative;
+  display: inline-block;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  background-color: #fff; 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px;
+  z-index: 1;
+  top: 40%; /* Adjust as needed */
+  left: 41%; /* Adjust as needed */
+  height: 130px;
+  width: 270px;
+  border: 2px solid red;
+  border-radius: 20px;
+  /* color: #fff; */
+}
+
+.popup p{
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.container:hover .popup {
+  display: block;
+}
+.popup::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  /* margin-left: -5px; */
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  rotate: 270deg;
+}
+
+@media (max-width: 50px) {
+  .footer-menu {
+    padding-left: 0;
+  }
+  .widget-about img {
+    max-width: 30%;
+  }
+  
+}
+@media (max-width:425px){
+  .footer--light{
+    position: relative;
+    top: 30px;
+    margin-top: 80px;
+  }
+}
